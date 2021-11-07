@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picture renders correctly 1`] = `
+<div
+  className="Picturestyled__StyledPicture-sc-18jsup7-0 ceeUBF"
+  width="100%"
+>
+  <picture
+    style={
+      Object {
+        "height": undefined,
+        "width": "100%",
+      }
+    }
+  >
+    <img
+      alt="Lorem ipsum"
+      loading="eager"
+      src="https://learn.saiyan.com/hubfs/magpie%20client%20images%20and%20files/Procter%20and%20Gamble/instead%20of%20coming%20soon.png"
+      width="100%"
+    />
+  </picture>
+</div>
+`;

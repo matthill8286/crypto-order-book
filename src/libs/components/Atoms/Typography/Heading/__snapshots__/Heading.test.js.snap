@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+<h1
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 ctdUyT"
+  fontFamily="featured"
+  fontSize="xxxl"
+  spacing="base"
+/>
+`;
+
+exports[`Heading should match snapshot with scale="level-1" 1`] = `
+<h1
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 draCiN"
+  fontFamily="default"
+  fontSize="xxxl"
+  spacing="base"
+/>
+`;
+
+exports[`Heading should match snapshot with scale="level-2" 1`] = `
+<h2
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 krARBI"
+  fontFamily="default"
+  fontSize="xxl"
+  spacing="base"
+/>
+`;
+
+exports[`Heading should match snapshot with scale="level-3" 1`] = `
+<h3
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 ijReaP"
+  fontFamily="default"
+  fontSize="xl"
+  spacing="base"
+/>
+`;
+
+exports[`Heading should match snapshot with scale="level-4" 1`] = `
+<h4
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 cRKbib"
+  fontFamily="default"
+  fontSize="lg"
+  spacing="base"
+/>
+`;
+
+exports[`Heading should match snapshot with scale="level-5" 1`] = `
+<h5
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 jYOSgS"
+  fontFamily="default"
+  fontSize="md"
+  spacing="half"
+/>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepConnector should render 1`] = `
+<div
+  className="StepConnector__StepConnectorRoot-v4n1if-0 cEiJzd"
+  color="primary"
+>
+  <span
+    className="StepConnector__StepConnectorLine-v4n1if-1 iHRhHB"
+    color="primary"
+  />
+</div>
+`;

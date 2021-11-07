@@ -1,0 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge should render 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge should render a badge line 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 gQWEsv"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge should render a badge line disabled 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ecZGlg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ecZGlg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ecZGlg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ecZGlg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ecZGlg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge should render a badge line secondary 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge should render with primary color 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Badge should render with secondary color 1`] = `
+<div
+  className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Badge No.1
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Some other label
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Free shipping
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Hot Hot Hot
+      </div>
+    </span>
+  </div>
+  <div
+    className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 klOziU"
+      fontSize="xxs"
+    >
+      <div
+        className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+      >
+        Last one
+      </div>
+    </span>
+  </div>
+</div>
+`;

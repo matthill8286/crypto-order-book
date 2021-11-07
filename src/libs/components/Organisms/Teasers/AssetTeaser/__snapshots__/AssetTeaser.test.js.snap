@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopTeaser renders correctly: AssetTeaser 1`] = `
+<a
+  className="Linkstyled__StyledLinkAnchor-qsbyg3-0 kIbsuh AssetTeaserstyled__StyledLink-sc-1in05jx-3 jfwYRZ"
+  color="grey4"
+  target="_self"
+>
+  <div
+    className="AssetTeaserstyled__StyledWrapper-sc-1in05jx-0 hDYMvM"
+  >
+    <div
+      className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 kXcGQv AssetTeaserstyled__StyledCard-sc-1in05jx-1 dwdSPw"
+    >
+      <div
+        className="Cardstyled__StyledCard-sc-1gxmhl7-1 eCZRqv"
+        display="flex"
+        elevation={0}
+      >
+        <div
+          className="AssetTeaserstyled__StyledMainContainer-sc-1in05jx-4 kUthSo"
+        >
+          <div
+            className="AssetTeaserstyled__StyledInfoContainer-sc-1in05jx-5 kysPDf"
+          >
+            <div
+              className="AssetTeaserstyled__StyledInfoContainerContent-sc-1in05jx-6 fqkAeI"
+            >
+              <p
+                className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iiAVrj HeadingFeatured__StyledFeaturedHeading-sc-1i1kuqv-0 clJruv"
+                color="primary"
+                fontFamily="featured"
+                fontSize="xxxxl"
+                spacing="base"
+              >
+                High standards require sensible processes
+              </p>
+              <div
+                className="AssetTeaserstyled__StyledInfoTextContainer-sc-1in05jx-7 dNbzHG"
+              >
+                <span
+                  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 eDHZgs"
+                  color="grey5"
+                  fontSize="sm"
+                >
+                  Well, the answer is obvious: “He hasn’t died yet.” Fortunately, for us, Munger has kept on ticking.
+                </span>
+              </div>
+              <div
+                className="AssetTeaserstyled__StyledFlexBottomContainer-sc-1in05jx-14 kdBYfn"
+              >
+                <div
+                  className="AssetTeaserstyled__StyledTopTeaserTagWrapper-sc-1in05jx-15 kEspRJ"
+                >
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      73 assets
+                    </span>
+                  </div>
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      23hours 18minutes
+                    </span>
+                  </div>
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      3% completed
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="AssetTeaserstyled__StyledAssetContainer-sc-1in05jx-8 jFcHtM"
+          >
+            <div
+              className="AssetTeaserstyled__StyledTongue-sc-1in05jx-11 kpnRRZ"
+              height={140}
+            >
+              <div
+                className="AssetTeaserstyled__StyledBackgroundImage-sc-1in05jx-10 Qfivt"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Cardstyled__StyledFeaturedAssetsContainer-sc-1gxmhl7-3 Pjaso"
+      >
+        <div
+          className="Cardstyled__StyledFeaturedAssetSpacing-sc-1gxmhl7-4 cUoSwD"
+        >
+          <div
+            className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 jhkssp"
+          >
+            <div
+              className="Cardstyled__StyledCard-sc-1gxmhl7-1 cysaNE"
+              display="flex"
+              elevation={1}
+              shape="rounded-small"
+            >
+              <div
+                className="Picturestyled__StyledPicture-sc-18jsup7-0 gCBPeQ Cardstyled__StyledFeaturedAssetsPicture-sc-1gxmhl7-2 gdZxmp"
+                height="32px"
+                width="auto"
+              >
+                <picture
+                  style={
+                    Object {
+                      "height": "32px",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="image"
+                    height="32px"
+                    loading="eager"
+                    src="public/images/featured_assets/featured_asset_01.png"
+                    width="auto"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="Cardstyled__StyledFeaturedAssetSpacing-sc-1gxmhl7-4 cUoSwD"
+        >
+          <div
+            className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 jhkssp"
+          >
+            <div
+              className="Cardstyled__StyledCard-sc-1gxmhl7-1 cysaNE"
+              display="flex"
+              elevation={1}
+              shape="rounded-small"
+            >
+              <div
+                className="Picturestyled__StyledPicture-sc-18jsup7-0 gCBPeQ Cardstyled__StyledFeaturedAssetsPicture-sc-1gxmhl7-2 gdZxmp"
+                height="32px"
+                width="auto"
+              >
+                <picture
+                  style={
+                    Object {
+                      "height": "32px",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="image"
+                    height="32px"
+                    loading="eager"
+                    src="public/images/featured_assets/featured_asset_03.png"
+                    width="auto"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`TopTeaser renders correctly: default AssetTeaser with maximum configuration 1`] = `
+<a
+  className="Linkstyled__StyledLinkAnchor-qsbyg3-0 kIbsuh AssetTeaserstyled__StyledLink-sc-1in05jx-3 jfwYRZ"
+  color="grey4"
+  target="_self"
+>
+  <div
+    className="AssetTeaserstyled__StyledWrapper-sc-1in05jx-0 hDYMvM"
+  >
+    <div
+      className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 kXcGQv AssetTeaserstyled__StyledCard-sc-1in05jx-1 dwdSPw"
+    >
+      <div
+        className="Cardstyled__StyledCard-sc-1gxmhl7-1 eCZRqv"
+        display="flex"
+        elevation={0}
+      >
+        <div
+          className="AssetTeaserstyled__StyledMainContainer-sc-1in05jx-4 kUthSo"
+        >
+          <div
+            className="AssetTeaserstyled__StyledInfoContainer-sc-1in05jx-5 bBFFbp"
+          >
+            <div
+              className="AssetTeaserstyled__StyledInfoContainerContent-sc-1in05jx-6 fqkAeI"
+            >
+              <p
+                className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iiAVrj HeadingFeatured__StyledFeaturedHeading-sc-1i1kuqv-0 clJruv"
+                color="primary"
+                fontFamily="featured"
+                fontSize="xxxxl"
+                spacing="base"
+              >
+                High standards require sensible processes
+              </p>
+              <div
+                className="AssetTeaserstyled__StyledInfoTextContainer-sc-1in05jx-7 dNbzHG"
+              >
+                <span
+                  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 eDHZgs"
+                  color="grey5"
+                  fontSize="sm"
+                >
+                  Well, the answer is obvious: “He hasn’t died yet.” Fortunately, for us, Munger has kept on ticking.
+                </span>
+              </div>
+              <div
+                className="AssetTeaserstyled__StyledFlexBottomContainer-sc-1in05jx-14 kdBYfn"
+              >
+                <div
+                  className="AssetTeaserstyled__StyledTopTeaserTagWrapper-sc-1in05jx-15 kEspRJ"
+                >
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      73 assets
+                    </span>
+                  </div>
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      23hours 18minutes
+                    </span>
+                  </div>
+                  <div
+                    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+                  >
+                    <span
+                      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+                      color="grey3"
+                      fontSize="xs"
+                    >
+                      3% completed
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="AssetTeaserstyled__StyledAssetContainer-sc-1in05jx-8 jFcHtM"
+          >
+            <div
+              className="AssetTeaserstyled__StyledTongue-sc-1in05jx-11 kpnRRZ"
+              height={140}
+            >
+              <div
+                className="AssetTeaserstyled__StyledBackgroundImage-sc-1in05jx-10 bCJkFc"
+              />
+            </div>
+            <div
+              className="AssetTeaserstyled__StyledPictureContainer-sc-1in05jx-9 ktmXBA"
+            >
+              <div
+                className="Picturestyled__StyledPicture-sc-18jsup7-0 jIsvqb"
+                height="100%"
+                width="100%"
+              >
+                <picture
+                  style={
+                    Object {
+                      "height": "100%",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="image"
+                    height="100%"
+                    loading="eager"
+                    src="public/images/teasers/product02.png"
+                    width="100%"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Cardstyled__StyledFeaturedAssetsContainer-sc-1gxmhl7-3 Pjaso"
+      >
+        <div
+          className="Cardstyled__StyledFeaturedAssetSpacing-sc-1gxmhl7-4 cUoSwD"
+        >
+          <div
+            className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 jhkssp"
+          >
+            <div
+              className="Cardstyled__StyledCard-sc-1gxmhl7-1 cysaNE"
+              display="flex"
+              elevation={1}
+              shape="rounded-small"
+            >
+              <div
+                className="Picturestyled__StyledPicture-sc-18jsup7-0 gCBPeQ Cardstyled__StyledFeaturedAssetsPicture-sc-1gxmhl7-2 gdZxmp"
+                height="32px"
+                width="auto"
+              >
+                <picture
+                  style={
+                    Object {
+                      "height": "32px",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="image"
+                    height="32px"
+                    loading="eager"
+                    src="public/images/featured_assets/featured_asset_01.png"
+                    width="auto"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="Cardstyled__StyledFeaturedAssetSpacing-sc-1gxmhl7-4 cUoSwD"
+        >
+          <div
+            className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 jhkssp"
+          >
+            <div
+              className="Cardstyled__StyledCard-sc-1gxmhl7-1 cysaNE"
+              display="flex"
+              elevation={1}
+              shape="rounded-small"
+            >
+              <div
+                className="Picturestyled__StyledPicture-sc-18jsup7-0 gCBPeQ Cardstyled__StyledFeaturedAssetsPicture-sc-1gxmhl7-2 gdZxmp"
+                height="32px"
+                width="auto"
+              >
+                <picture
+                  style={
+                    Object {
+                      "height": "32px",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="image"
+                    height="32px"
+                    loading="eager"
+                    src="public/images/featured_assets/featured_asset_03.png"
+                    width="auto"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`TopTeaser renders correctly: default AssetTeaser with minimal configuration 1`] = `
+<a
+  className="Linkstyled__StyledLinkAnchor-qsbyg3-0 kIbsuh AssetTeaserstyled__StyledLink-sc-1in05jx-3 jfwYRZ"
+  color="grey4"
+  target="_self"
+>
+  <div
+    className="AssetTeaserstyled__StyledWrapper-sc-1in05jx-0 hDYMvM"
+  >
+    <div
+      className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 kXcGQv AssetTeaserstyled__StyledCard-sc-1in05jx-1 dwdSPw"
+    >
+      <div
+        className="Cardstyled__StyledCard-sc-1gxmhl7-1 eCZRqv"
+        display="flex"
+        elevation={0}
+      >
+        <div
+          className="AssetTeaserstyled__StyledMainContainer-sc-1in05jx-4 kUthSo"
+        >
+          <div
+            className="AssetTeaserstyled__StyledInfoContainer-sc-1in05jx-5 kysPDf"
+          >
+            <div
+              className="AssetTeaserstyled__StyledInfoContainerContent-sc-1in05jx-6 fqkAeI"
+            >
+              <p
+                className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iiAVrj HeadingFeatured__StyledFeaturedHeading-sc-1i1kuqv-0 clJruv"
+                color="primary"
+                fontFamily="featured"
+                fontSize="xxxxl"
+                spacing="base"
+              >
+                High standards require sensible processes
+              </p>
+              <div
+                className="AssetTeaserstyled__StyledInfoTextContainer-sc-1in05jx-7 dNbzHG"
+              >
+                <span
+                  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 ktxNak"
+                  color="grey5"
+                  fontSize="sm"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="AssetTeaserstyled__StyledAssetContainer-sc-1in05jx-8 jFcHtM"
+          >
+            <div
+              className="AssetTeaserstyled__StyledUpsetRect-sc-1in05jx-12 bonPJA"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;

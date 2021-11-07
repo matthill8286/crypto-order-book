@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status renders correctly 1`] = `
+<div
+  className="Status-y46az8-0 jexwdk"
+  type="primary"
+>
+  1
+</div>
+`;

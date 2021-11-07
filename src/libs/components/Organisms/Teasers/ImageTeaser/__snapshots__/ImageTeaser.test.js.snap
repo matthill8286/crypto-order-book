@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageTeaser renders correctly: default teaser with badges 1`] = `
+<div
+  className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 gyZXAf"
+>
+  <div
+    className="Cardstyled__StyledBadgeLineWrapper-sc-1gxmhl7-0 cFLGQx"
+  >
+    <div
+      className="Badgestyled__StyledBadgeLineWrapper-sc-1xo0r7x-1 ejODHn"
+    >
+      <div
+        className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+      >
+        <span
+          className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+          fontSize="xxs"
+        >
+          <div
+            className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+          >
+            Featured
+          </div>
+        </span>
+      </div>
+      <div
+        className="Badgestyled__StyledBadgeWrapper-sc-1xo0r7x-2 TMGmv"
+      >
+        <span
+          className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hycfbo Badgestyled__StyledTypo-sc-1xo0r7x-0 ePrcMg"
+          fontSize="xxs"
+        >
+          <div
+            className="Badgestyled__StyledOverflow-sc-1xo0r7x-3 iyMzXH"
+          >
+            Live@@@
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Cardstyled__StyledCard-sc-1gxmhl7-1 sFHjI"
+    display="flex"
+    elevation={0}
+    shape="rounded-small"
+  >
+    <div
+      className="Picturestyled__StyledPicture-sc-18jsup7-0 jIsvqb"
+      height="100%"
+      width="100%"
+    >
+      <picture
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <source
+          media="(max-width: 511px)"
+          srcSet="public/images/teasers/1200x360.jpg"
+        />
+        <source
+          media="(max-width: 751px)"
+          srcSet="public/images/teasers/1000x360.jpg"
+        />
+        <source
+          media="(max-width: 1007px)"
+          srcSet="public/images/teasers/700x560.jpg"
+        />
+        <img
+          alt="image"
+          height="100%"
+          loading="eager"
+          src="public/images/teasers/500x560.jpg"
+          width="100%"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+`;

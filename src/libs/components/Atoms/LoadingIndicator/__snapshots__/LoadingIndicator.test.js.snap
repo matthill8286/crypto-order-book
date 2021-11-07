@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingIndicator renders saiyan theme 1`] = `
+<div
+  className="LoadingIndicator__StyledLoadingWrapper-sc-12we8y6-0 ibTRmW"
+  color="primary"
+  size={50}
+>
+  <div />
+  <div />
+  <div />
+  <div />
+</div>
+`;

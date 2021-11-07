@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Foldable should render 1`] = `
+<div
+  className="Foldable__StyledFoldable-sc-1ors3ot-0 ijHRpZ"
+  data-test="foldable"
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "auto",
+      "transition": "height 300ms linear",
+    }
+  }
+>
+  <div
+    data-test="inner-foldable"
+  >
+    <div>
+      HIDDEN
+    </div>
+  </div>
+</div>
+`;

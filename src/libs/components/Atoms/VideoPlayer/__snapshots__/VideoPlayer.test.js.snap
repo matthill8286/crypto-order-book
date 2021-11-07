@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoPlayer renders correctly 1`] = `
+<div
+  className="VideoPlayerstyled__StyledVideoWrapper-sc-12w6ma-0 eOAArN"
+>
+  <div
+    className="VideoPlayerstyled__StyledVideoPlayer-sc-12w6ma-1 kBWsxD"
+    id="video-player-container-player-core"
+    rounded={false}
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+  <div
+    id="video-player-container-player-core"
+  />
+</div>
+`;

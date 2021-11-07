@@ -1,7 +1,6 @@
-const withTM = require('next-transpile-modules')(['@matthill8286/atomic-ui'])
+const withTM = require('next-transpile-modules')(['@matthill8286/atomic-icon-library'])
 
 module.exports = withTM({
-  reactStrictMode: false,
   webpack(config) {
     config.module.rules.push(
       {
@@ -13,16 +12,9 @@ module.exports = withTM({
         },
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/',
-            },
-          },
-        ],
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ico)(\?.*)?$/,
+        exclude: /node_modules/,
+        loader: require.resolve('url-loader')
       }
     )
     return config

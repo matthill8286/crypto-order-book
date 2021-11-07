@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, SetStateAction, Dispatch, MutableRefObject } from 'react'
-import { OrderRowHash, OrderRowState, UseFeedWorker } from '@/types/order.type'
+import { OrderRowHash, OrderRowState, UseFeedWorker } from '../../types/order.type'
 
 export const useFeedWorker = (): UseFeedWorker => {
   const [status, setStatus]: [string, Dispatch<SetStateAction<string>>] = useState('loading')
@@ -10,7 +10,7 @@ export const useFeedWorker = (): UseFeedWorker => {
   useEffect(() => {
     (async () => {
       worker.current = new Worker(
-        new URL('@/workers/feed.worker', import.meta.url)
+        new URL('../../workers/feed.worker', import.meta.url)
       )
 
       worker.current.onmessage = (event) => {

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar renders basic 1`] = `
+<progress
+  className="ProgressBar__StyledProgressBar-iekkgs-0 celtLK"
+  max={100}
+  value={12}
+/>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton SkeletonBlockItem should render 1`] = `
+<div
+  className="SkeletonBlockItem__StyledSkeletonBlockItem-sc-119erzb-0 iCCOLN"
+  height="200px"
+/>
+`;
+
+exports[`Skeleton SkeletonBlockItem should render with height 1`] = `
+<div
+  className="SkeletonBlockItem__StyledSkeletonBlockItem-sc-119erzb-0 gMKmIW"
+  height="200px"
+  width="100%"
+/>
+`;
+
+exports[`Skeleton SkeletonInlineItem should render 1`] = `
+<span
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hSKBJn SkeletonInlineItem__StyledSkeletonInlineItem-cxlfm1-0 gKkfjf"
+>
+  Lorem Ipsum
+</span>
+`;
+
+exports[`Skeleton SkeletonInlineItem should render with font-size 1`] = `
+<span
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 epOizM SkeletonInlineItem__StyledSkeletonInlineItem-cxlfm1-0 gKkfjf"
+  fontSize="xxl"
+>
+  Lorem Ipsum
+</span>
+`;

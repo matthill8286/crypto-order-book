@@ -6,12 +6,12 @@ import {
   OrderRowState,
   SourceOrderBook,
   TickerShape
-} from '@/types/order.type'
+} from '../types/order.type'
 import {
   getDecimalPlace,
   groupTickRows,
   refreshOrderBookState,
-} from '@/api/orderbook-group/orderbook-group.api'
+} from '../api/orderbook-group/orderbook-group.api'
 
 class OrderBookSocketFeed {
   private websocket: WebSocket
@@ -21,7 +21,6 @@ class OrderBookSocketFeed {
   private orderBookState: OrderRowState<OrderRowHash>
   private lastAnnouncedTime: Date
   private announcementIntervalMs = 250
-  private feedKilled = false
 
   constructor(
     endpoint = 'wss://www.cryptofacilities.com/ws/v1',
@@ -255,11 +254,11 @@ class OrderBookSocketFeed {
     }
 
     const orderBookSnapshot: OrderRowState<OrderRowHash> = this.groupByTickSize({
-      asks: Object.keys(this.sourceOrderBook.asks).map((key) => {
+      asks: Object.keys(this.sourceOrderBook.asks).slice(0, 15).map((key) => {
         const { price, size } = this.sourceOrderBook.asks[parseFloat(key)]
         return [parseFloat(price), size]
       }),
-      bids: Object.keys(this.sourceOrderBook.bids).map((key) => {
+      bids: Object.keys(this.sourceOrderBook.bids).slice(0, 15).map((key) => {
         const { price, size } = this.sourceOrderBook.bids[parseFloat(key)]
         return [parseFloat(price), size]
       }),

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { ReactElement, ReactNode } from 'react'
-import { saiyanTheme, ThemeProvider } from '@matthill8286/atomic-ui'
-import OrderBook from '@/components/OrderBook'
+import { Cell, Grid, Row, saiyanTheme, ThemeProvider } from '../src/libs'
+import OrderBook from '../src/components/OrderBook'
 
 export const Home = (): ReactElement | ReactNode => (
   <div className='container'>
@@ -11,7 +11,13 @@ export const Home = (): ReactElement | ReactNode => (
     </Head>
 
     <ThemeProvider theme={saiyanTheme}>
-      <OrderBook />
+      <Grid>
+        <Row>
+          <Cell columns={12}>
+            <OrderBook />
+          </Cell>
+        </Row>
+      </Grid>
     </ThemeProvider>
   </div>
 )

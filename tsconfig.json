@@ -1,26 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": [
+      "es2015",
+      "dom",
+      "es6",
+      "es2017",
+      "es2019",
+      "esnext.asynciterable"
+    ],
+    "moduleResolution": "Node",
     "allowJs": true,
     "skipLibCheck": true,
+    "downlevelIteration": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/api/*": ["src/api/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/workers/*": ["src/workers/*"],
-      "@/types/*": ["src/types/*"],
-      "@matthill8286/atomic-ui": ["node_modules/@matthill8286/atomic-ui/src/index.ts"]
+      "@matthill8286/atomic-icon-library": ["node_modules/@matthill8286/atomic-icon-library/src/index.ts"]
     }
   },
   "exclude": [
@@ -28,5 +32,10 @@
     ".next",
     "out"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ]
 }

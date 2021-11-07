@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputRange should render 1`] = `
+<div
+  className="InputRangestyled__StyledInputRangeContainer-sc-10ybtf3-0 kUxsRe"
+>
+  <div
+    className="InputRangestyled__StyledInputRangeBubbleContainer-sc-10ybtf3-1 jKSnVa"
+  >
+    <output
+      className="InputRangestyled__StyledInputRangeBubblePosition-sc-10ybtf3-2 TVQYH"
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    >
+      <output
+        className="InputRangestyled__StyledInputRangeBubble-sc-10ybtf3-3 cWCVac"
+      >
+        <span
+          className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 jtbRpZ InputRangestyled__StyledInputRangeBubbleTypo-sc-10ybtf3-4 cjDDdZ"
+          color="primary"
+          fontFamily="default"
+        >
+          10
+        </span>
+      </output>
+    </output>
+  </div>
+  <div
+    className="InputRangestyled__StyledInputRangeThumb-sc-10ybtf3-5 jnrEVz"
+    style={
+      Object {
+        "left": "100%",
+      }
+    }
+  />
+  <input
+    className="InputRangestyled__StyledInputRange-sc-10ybtf3-6 bhLsAS"
+    list="input-range"
+    max="1"
+    min="0"
+    name="input-range"
+    onChange={[Function]}
+    onMouseDown={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    step="0.1"
+    type="range"
+    value="1"
+  />
+</div>
+`;

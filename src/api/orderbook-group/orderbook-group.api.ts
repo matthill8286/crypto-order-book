@@ -3,7 +3,7 @@ import {
   OrderRowHash,
   OrderRowState,
   OrderRowWithoutTotal,
-} from '@/types/order.type'
+} from '../../types/order.type'
 
 // const input = [
 //   [11, 1],

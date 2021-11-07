@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolTip renders basic 1`] = `
+<div
+  className="ToolTipstyled__StyledToolTipWrapper-sc-1umk7nb-0 hrfefP"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;

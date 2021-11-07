@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders correctly 1`] = `
+<div
+  className="ButtonGroupstyled__StyledButtonGroup-sc-1qkc8ga-0 kapciZ"
+>
+  Hello
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer renders correctly 1`] = `
+<div
+  className="Spacer__StyledSpacer-sc-66xpbd-0 ePeiab"
+  direction="horizontal"
+  size="md"
+/>
+`;
+
+exports[`Spacer renders correctly in vertical direction 1`] = `
+<div
+  className="Spacer__StyledSpacer-sc-66xpbd-0 jNSAOi"
+  direction="vertical"
+  size="md"
+/>
+`;

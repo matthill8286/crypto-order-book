@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaterialGrid Cell component renders hidden with view port columns count set to 0 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 kVHWOx"
+/>
+`;
+
+exports[`MaterialGrid Cell component renders with column order 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 jixZHx"
+  order={2}
+/>
+`;
+
+exports[`MaterialGrid Cell component renders with custom responsive column count for view ports 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 cjVLej"
+/>
+`;
+
+exports[`MaterialGrid Grid component renders a div per default 1`] = `
+<div
+  className="Grid__StyledGrid-ovutvr-0 cOfzdY"
+/>
+`;
+
+exports[`MaterialGrid Grid component renders with Rows and Cells (children) 1`] = `
+<div
+  className="Grid__StyledGrid-ovutvr-0 cOfzdY"
+>
+  <div
+    className="Row__StyledRow-sc-1o9ecac-0 leYzKt"
+  >
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+  </div>
+  <div
+    className="Row__StyledRow-sc-1o9ecac-0 leYzKt"
+  >
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+    <div
+      className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+    />
+  </div>
+</div>
+`;
+
+exports[`MaterialGrid Offset component renders hidden with no values, because of default props 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 kVHWOx"
+/>
+`;
+
+exports[`MaterialGrid Offset component renders hidden with view port columns count set to 0 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 kVHWOx"
+/>
+`;
+
+exports[`MaterialGrid Offset component renders with column order 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 jixZHx"
+  order={2}
+/>
+`;
+
+exports[`MaterialGrid Offset component renders with custom responsive column count for view ports 1`] = `
+<div
+  className="Cellstyled__StyledCell-sc-4z19ev-0 cjVLej"
+/>
+`;
+
+exports[`MaterialGrid additional customizations with custom tags renders Cell with custom tag name 1`] = `
+<section
+  className="Cellstyled__StyledCell-sc-4z19ev-0 jNLgpA"
+/>
+`;
+
+exports[`MaterialGrid additional customizations with custom tags renders Grid with custom tag name 1`] = `
+<section
+  className="Grid__StyledGrid-ovutvr-0 cOfzdY"
+/>
+`;
+
+exports[`MaterialGrid additional customizations with custom tags renders Offset with custom tag name 1`] = `
+<section
+  className="Cellstyled__StyledCell-sc-4z19ev-0 kVHWOx"
+/>
+`;
+
+exports[`MaterialGrid additional customizations with custom tags renders Row with custom tag name 1`] = `
+<section
+  className="Row__StyledRow-sc-1o9ecac-0 leYzKt"
+/>
+`;

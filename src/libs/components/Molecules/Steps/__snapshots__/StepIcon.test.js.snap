@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIcon should render 1`] = `
+<div
+  className="StepIcon__StepIconRoot-sc-1u4fq5c-0 ccWujG"
+>
+  <div
+    className="StepIcon__Circle-sc-1u4fq5c-1 eIvYNi"
+    color="primary"
+  >
+    <div
+      className="StepIcon__Checkmark-sc-1u4fq5c-2 bfNOpZ"
+      color="primary"
+    />
+  </div>
+</div>
+`;

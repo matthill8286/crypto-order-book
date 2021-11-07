@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Steps should render 1`] = `
+<div
+  className="Cardstyled__StyledCardWrapper-sc-1gxmhl7-6 jhkssp"
+>
+  <div
+    className="Cardstyled__StyledCard-sc-1gxmhl7-1 gPtiqh"
+    display="block"
+    elevation={0}
+  >
+    <div
+      className="FlexBox__StyledBox-sc-52meld-0 iVkoxK"
+      display="flex"
+    />
+  </div>
+</div>
+`;

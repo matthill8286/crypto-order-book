@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexBox renders correctly 1`] = `
+<div
+  className="FlexBox__StyledBox-sc-52meld-0 fkNwwV"
+  display="flex"
+/>
+`;
+
+exports[`FlexBox renders with direction column 1`] = `
+<div
+  className="FlexBox__StyledBox-sc-52meld-0 kSmAcZ"
+  display="flex"
+/>
+`;
+
+exports[`FlexBox renders with flex wrap 1`] = `
+<div
+  className="FlexBox__StyledBox-sc-52meld-0 hVXbHd"
+  display="flex"
+/>
+`;
+
+exports[`FlexItem renders correctly 1`] = `
+<div
+  className="FlexBox__StyledFlexItem-sc-52meld-1 cuJgpq"
+  order={0}
+/>
+`;

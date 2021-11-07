@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag Should render 20 tags 1`] = `
+Array [
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      lorem
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      ipsum
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      dolor
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      sit
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      amet
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      consectetur
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      adipiscing
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      elit
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      curabitur
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      vel
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      hendrerit
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      libero
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      eleifend
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      blandit
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      nunc
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      ornare
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      odio
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      ut
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      orci
+    </span>
+  </div>,
+  <div
+    className="Tagstyled__StyledTagWrapper-k5mbhe-0 jOgjTq"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      gravida
+    </span>
+  </div>,
+]
+`;
+
+exports[`Tag Should render a tag 1`] = `
+<div
+  className="Tagstyled__StyledTagWrapper-k5mbhe-0 eDKiaB"
+>
+  <span
+    className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+    color="grey3"
+    fontSize="xs"
+  >
+    
+  </span>
+</div>
+`;
+
+exports[`Tag Should render a tag with link 1`] = `
+<div
+  className="Tagstyled__StyledTagWrapper-k5mbhe-0 cAcWYe"
+>
+  <a
+    className="Tagstyled__StyledAnchorTag-k5mbhe-1 fZyvSX"
+    href="#"
+    target="_blank"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 iKQzKe"
+      color="grey3"
+      fontSize="xs"
+    >
+      
+    </span>
+  </a>
+</div>
+`;

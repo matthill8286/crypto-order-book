@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meta Feature list renders feature list 1`] = `
+<div
+  className="FlexBox__StyledBox-sc-52meld-0 kSmAcZ"
+  display="flex"
+>
+  <div
+    className="FeatureList__ListWrapper-sc-1lbwj8e-0 jxsuMD"
+  >
+    <div
+      className="Grid__StyledGrid-ovutvr-0 bFTtP"
+    >
+      <div
+        className="Row__StyledRow-sc-1o9ecac-0 dDvLOq"
+      >
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWfVXO"
+            color="grey5"
+            fontSize="xs"
+          >
+            Provider
+          </p>
+        </div>
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 gMqzZI"
+            color="grey5"
+            fontSize="xs"
+          >
+            Youtube
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="Divider__StyledHR-sc-40hr1c-0 gxbmei"
+    color="grey2"
+    height={1}
+  />
+  <div
+    className="FeatureList__ListWrapper-sc-1lbwj8e-0 jxsuMD"
+  >
+    <div
+      className="Grid__StyledGrid-ovutvr-0 bFTtP"
+    >
+      <div
+        className="Row__StyledRow-sc-1o9ecac-0 dDvLOq"
+      >
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWfVXO"
+            color="grey5"
+            fontSize="xs"
+          >
+            Primary competency
+          </p>
+        </div>
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 gMqzZI"
+            color="grey5"
+            fontSize="xs"
+          >
+            Digital Marketing
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="Divider__StyledHR-sc-40hr1c-0 gxbmei"
+    color="grey2"
+    height={1}
+  />
+  <div
+    className="FeatureList__ListWrapper-sc-1lbwj8e-0 jxsuMD"
+  >
+    <div
+      className="Grid__StyledGrid-ovutvr-0 bFTtP"
+    >
+      <div
+        className="Row__StyledRow-sc-1o9ecac-0 dDvLOq"
+      >
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWfVXO"
+            color="grey5"
+            fontSize="xs"
+          >
+            Type
+          </p>
+        </div>
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 gMqzZI"
+            color="grey5"
+            fontSize="xs"
+          >
+            Article
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="Divider__StyledHR-sc-40hr1c-0 gxbmei"
+    color="grey2"
+    height={1}
+  />
+  <div
+    className="FeatureList__ListWrapper-sc-1lbwj8e-0 jxsuMD"
+  >
+    <div
+      className="Grid__StyledGrid-ovutvr-0 bFTtP"
+    >
+      <div
+        className="Row__StyledRow-sc-1o9ecac-0 dDvLOq"
+      >
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWfVXO"
+            color="grey5"
+            fontSize="xs"
+          >
+            Length
+          </p>
+        </div>
+        <div
+          className="Cellstyled__StyledCell-sc-4z19ev-0 kGEQEJ"
+        >
+          <p
+            className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 gMqzZI"
+            color="grey5"
+            fontSize="xs"
+          >
+            16 minutes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="Divider__StyledHR-sc-40hr1c-0 gxbmei"
+    color="grey2"
+    height={1}
+  />
+</div>
+`;

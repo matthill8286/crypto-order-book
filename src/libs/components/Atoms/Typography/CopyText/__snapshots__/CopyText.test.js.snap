@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CopyText renders correctly 1`] = `
+<p
+  className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 kjuzBv"
+  color="grey5"
+  fontSize="xs"
+>
+  Lorem Ipsum
+</p>
+`;

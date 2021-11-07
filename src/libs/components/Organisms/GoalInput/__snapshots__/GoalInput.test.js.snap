@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoalInput should render 1`] = `
+<div
+  className="GoalInput__InputContainer-sc-5sx1y3-0 litotK"
+>
+  <div
+    className="GoalInput__InformationContainer-sc-5sx1y3-4"
+  >
+    <h4
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hGcpCs"
+      fontFamily="default"
+      fontSize="lg"
+      spacing="base"
+    >
+      Can I manage you as well as I should?
+    </h4>
+    <div
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 cpKuUF"
+      color="grey4"
+      fontSize="sm"
+    >
+      Where are you now:
+    </div>
+  </div>
+  <div
+    className="GoalInput__RangeContainer-sc-5sx1y3-1 jfkOHz"
+  >
+    <div
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWArgc GoalInput__StyledTypo-sc-5sx1y3-3 kgfwyf"
+      color="grey4"
+      display="flex"
+    />
+    <div
+      className="InputRangestyled__StyledInputRangeContainer-sc-10ybtf3-0 kUxsRe"
+    >
+      <div
+        className="InputRangestyled__StyledInputRangeThumb-sc-10ybtf3-5 jnrEVz"
+        style={
+          Object {
+            "left": "70%",
+          }
+        }
+      />
+      <input
+        className="InputRangestyled__StyledInputRange-sc-10ybtf3-6 bhLsAS"
+        list="test-goal"
+        max={1}
+        min={0}
+        name="test-goal"
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        step={0.1}
+        type="range"
+        value={0.7}
+      />
+    </div>
+    <div
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWArgc GoalInput__StyledTypo-sc-5sx1y3-3 kgfwyf"
+      color="grey4"
+      display="flex"
+    />
+  </div>
+  <div
+    className="GoalInput__InformationContainer-sc-5sx1y3-4"
+  >
+    <div
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 cpKuUF"
+      color="grey4"
+      fontSize="sm"
+    >
+      Where do you need to be:
+    </div>
+  </div>
+  <div
+    className="GoalInput__RangeContainer-sc-5sx1y3-1 jfkOHz"
+  >
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWArgc GoalInput__StyledTypo-sc-5sx1y3-3 kgfwyf"
+      color="grey4"
+      display="flex"
+    />
+    <div
+      className="InputRangestyled__StyledInputRangeContainer-sc-10ybtf3-0 kUxsRe"
+    >
+      <div
+        className="InputRangestyled__StyledInputRangeThumb-sc-10ybtf3-5 jnrEVz"
+        style={
+          Object {
+            "left": "10%",
+          }
+        }
+      />
+      <input
+        className="InputRangestyled__StyledInputRange-sc-10ybtf3-6 bhLsAS"
+        list="test-need"
+        max={1}
+        min={0}
+        name="test-need"
+        onChange={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        step={0.1}
+        type="range"
+        value={0.1}
+      />
+    </div>
+    <span
+      className="Typostyled__StyledInfoTypo-sc-1o9a6sy-0 hWArgc GoalInput__StyledTypo-sc-5sx1y3-3 kgfwyf"
+      color="grey4"
+      display="flex"
+    />
+  </div>
+</div>
+`;

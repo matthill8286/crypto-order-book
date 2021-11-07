@@ -12,7 +12,7 @@ import {
   styled,
   useWindowDimensions,
   Heading,
-} from '@matthill8286/atomic-ui'
+} from '../../libs'
 
 const StyledTableWrapper = styled(FlexBox)`
   flex: 1;
@@ -104,7 +104,7 @@ const OrderBook = (): ReactElement | null => {
   }
 
   return (
-    <section style={{ minHeight: '800px' }}>
+    <section style={{ maxHeight: '800px', overflow: "scroll" }}>
       <StyledTableWrapper flexDirection="row">
         <div className={styles.topbar}>
           <Heading scale="level-4" weight="bold" color="white">
@@ -146,7 +146,7 @@ const OrderBook = (): ReactElement | null => {
           />
         </FlexItem>
         {isMobile && (
-          <CopyText display="flex" alignText="center" color="grey3">
+          <CopyText display="flex" textAlign="center" color="grey3">
             {spread}
           </CopyText>
         )}
