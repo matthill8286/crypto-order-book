@@ -19,15 +19,13 @@
       "@/api/*": ["src/api/*"],
       "@/styles/*": ["src/styles/*"],
       "@/workers/*": ["src/workers/*"],
-      "@/types/*": ["src/types/*"],
-      "atomic-ui": ["node_modules/@matthill8286/atomic-ui/dist/index.js"]
+      "@/types/*": ["src/types/*"]
     }
   },
   "exclude": [
     "node_modules",
     ".next",
-    "out",
-    "node_modules/@matthill8286/atomic-ui"
+    "out"
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
 }
