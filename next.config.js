@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['@matthill8286/atomic-ui', "@matthill8286/atomic-icon-library"])
+const withTM = require('next-transpile-modules')(['@matthill8286/atomic-ui'])
 
 module.exports = withTM({
   reactStrictMode: false,
