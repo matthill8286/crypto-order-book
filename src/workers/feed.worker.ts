@@ -2,10 +2,10 @@ import {
   CryptoFacilitiesWSSnapshot,
   GranularOrderDelta,
   OrderDelta,
-  OrderDeltaWithTimestamp,
+  OrderDeltaWithTimestamp, OrderRowHash,
   OrderRowState,
   SourceOrderBook,
-  TickerShape,
+  TickerShape
 } from '@/types/order.type'
 import {
   getDecimalPlace,
@@ -17,8 +17,8 @@ class OrderBookSocketFeed {
   private websocket: WebSocket
   private ticker: string
   private tickSize: number
-  private sourceOrderBook: SourceOrderBook
-  private orderBookState: OrderRowState
+  private sourceOrderBook: SourceOrderBook<OrderDeltaWithTimestamp>
+  private orderBookState: OrderRowState<OrderRowHash>
   private lastAnnouncedTime: Date
   private announcementIntervalMs = 250
   private feedKilled = false
@@ -43,7 +43,7 @@ class OrderBookSocketFeed {
     }
 
     wss.onmessage = (event: MessageEvent) => {
-      const data: CryptoFacilitiesWSSnapshot = JSON.parse(event.data)
+      const data: CryptoFacilitiesWSSnapshot<OrderDelta> = JSON.parse(event.data)
       const decimalPlace = getDecimalPlace(this.tickSize)
 
       switch (data.feed) {
@@ -192,7 +192,7 @@ class OrderBookSocketFeed {
     )
   }
 
-  private updateDelta(orderDelta: GranularOrderDelta): void {
+  private updateDelta(orderDelta: GranularOrderDelta<OrderDelta>): void {
     const currentDateStamp = new Date()
     if (!orderDelta.asks || !orderDelta.bids) {
       return
@@ -254,7 +254,7 @@ class OrderBookSocketFeed {
       })
     }
 
-    const orderBookSnapshot: OrderRowState = this.groupByTickSize({
+    const orderBookSnapshot: OrderRowState<OrderRowHash> = this.groupByTickSize({
       asks: Object.keys(this.sourceOrderBook.asks).map((key) => {
         const { price, size } = this.sourceOrderBook.asks[parseFloat(key)]
         return [parseFloat(price), size]
@@ -327,7 +327,7 @@ class OrderBookSocketFeed {
       .map((d) => d[1])
       .reduce((acc, curr) => acc + curr, 0)
 
-    const orderBookSnapshot: OrderRowState = {
+    const orderBookSnapshot: OrderRowState<OrderRowHash> = {
       ticker,
       asks: groupTickRows(
         tickSize,

@@ -1,17 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
-import { OrderRowState } from '@/types/order.type'
-
-export type Status = 'loading' | 'ready' | 'killed' | 'error'
-
-export interface UseFeedWorker {
-  status: Status
-  feed: Worker | null
-  orderBook: OrderRowState | undefined
-}
+import { OrderRowHash, OrderRowState, UseFeedWorker } from '@/types/order.type'
 
 export const useFeedWorker = (): UseFeedWorker => {
   const [status, setStatus] = useState('loading')
-  const [orderBook, setOrderBook] = useState<OrderRowState>()
+  const [orderBook, setOrderBook] = useState<OrderRowState<OrderRowHash>>()
 
   const worker = useRef<Worker>()
 
@@ -24,12 +16,12 @@ export const useFeedWorker = (): UseFeedWorker => {
       worker.current.onmessage = (event) => {
         switch (event.data.type) {
           case 'SNAPSHOT': {
-            const orderBookSnapshot: OrderRowState = event.data.data
+            const orderBookSnapshot: OrderRowState<OrderRowHash> = event.data.data
             setOrderBook(Object.freeze(orderBookSnapshot))
             break
           }
           case 'ORDER': {
-            const orderBookSnapshot: OrderRowState = event.data.data
+            const orderBookSnapshot: OrderRowState<OrderRowHash> = event.data.data
             setOrderBook(Object.freeze(orderBookSnapshot))
             break
           }

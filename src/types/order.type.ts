@@ -9,20 +9,16 @@ export type OrderMeta = {
   total?: number
 }
 
-export type OrderRowUntotaled = {
+export type OrderRowWithoutTotal = {
   price: PriceDisplay
   size: number
   total?: number
   date?: Date
 }
 
-export type Type = 'ask' | 'bid'
-
 type PriceDisplay = string
 type Price = number
 type Size = number
-
-export type OrderDeltaForDisplay = [PriceDisplay, Size]
 
 export type OrderDelta = [Price, Size]
 
@@ -32,36 +28,44 @@ export type OrderDeltaWithTimestamp = {
   date: Date
 }
 
-export interface CryptoFacilitiesWSSnapshot {
+export type CryptoFacilitiesWSSnapshot<T> = {
   product_id: string
   numLevels: number
   feed: string
-  bids: OrderDelta[]
-  asks: OrderDelta[]
+  bids: T[]
+  asks: T[]
 }
 
 export interface OrderRowHash {
   [key: number]: OrderMeta
 }
 
-export interface OrderRowState {
+export type OrderRowState<T> = {
   ticker: string
-  asks: OrderRowHash
-  bids: OrderRowHash
+  asks: T
+  bids: T
   maxPriceSize: number
 }
 
-export interface SourceOrderBook {
+export interface SourceOrderBook<T> {
   product_id: string
   numLevels: number
   feed: string
-  asks: { [key: number]: OrderDeltaWithTimestamp }
-  bids: { [key: number]: OrderDeltaWithTimestamp }
+  asks: { [key: number]: T }
+  bids: { [key: number]: T }
 }
 
-export interface GranularOrderDelta {
+export interface GranularOrderDelta<T> {
   product_id: string
   feed: string
-  asks: OrderDelta[]
-  bids: OrderDelta[]
+  asks: T[]
+  bids: T[]
+}
+
+export type Status = 'loading' | 'ready' | 'killed' | 'error'
+
+export interface UseFeedWorker {
+  status: Status
+  feed: Worker | null
+  orderBook: OrderRowState<OrderRowHash> | undefined
 }

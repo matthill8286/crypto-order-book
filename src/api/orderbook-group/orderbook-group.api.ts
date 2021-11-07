@@ -2,7 +2,7 @@ import {
   OrderMeta,
   OrderRowHash,
   OrderRowState,
-  OrderRowUntotaled,
+  OrderRowWithoutTotal,
 } from '@/types/order.type'
 
 // const input = [
@@ -25,8 +25,8 @@ import {
 
 export const refreshOrderBookState = (
   tickSize: number,
-  prevOrderBookState: OrderRowState
-): OrderRowState => {
+  prevOrderBookState: OrderRowState<OrderRowHash>
+): OrderRowState<OrderRowHash> => {
   const extractSizeFromOrderHashmap = (hashMap: {
     [key: number]: OrderMeta
   }) => {
@@ -56,7 +56,7 @@ export const getDecimalPlace = (tickSize: number): number => {
 
 export const groupTickRows = (
   tickSize: number,
-  orderDeltas: { [key: number]: OrderRowUntotaled }
+  orderDeltas: { [key: number]: OrderRowWithoutTotal }
 ): OrderRowHash => {
   // input to output
   // 10.666 --> 10      tick 1
