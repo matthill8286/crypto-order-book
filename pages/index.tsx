@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ReactElement, ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { saiyanTheme, ThemeProvider } from '@matthill8286/atomic-ui'
 import OrderBook from '@/components/OrderBook'
 
