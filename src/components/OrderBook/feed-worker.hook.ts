@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, SetStateAction, Dispatch, MutableRefObject } from 'react'
 import { OrderRowHash, OrderRowState, UseFeedWorker } from '@/types/order.type'
 
 export const useFeedWorker = (): UseFeedWorker => {
-  const [status, setStatus] = useState('loading')
-  const [orderBook, setOrderBook] = useState<OrderRowState<OrderRowHash>>()
+  const [status, setStatus]: [string, Dispatch<SetStateAction<string>>] = useState('loading')
+  const [orderBook, setOrderBook]: [OrderRowState<OrderRowHash>, Dispatch<SetStateAction<OrderRowState<OrderRowHash>>>] = useState<OrderRowState<OrderRowHash>>()
 
-  const worker = useRef<Worker>()
+  const worker: MutableRefObject<Worker> = useRef<Worker>()
 
   useEffect(() => {
     (async () => {
@@ -39,13 +39,13 @@ export const useFeedWorker = (): UseFeedWorker => {
     return {
       status: 'ready',
       feed: worker.current,
-      orderBook,
+      orderBook
     }
   }
 
   return {
     status: 'loading',
     feed: null,
-    orderBook,
+    orderBook
   }
 }
