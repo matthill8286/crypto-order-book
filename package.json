@@ -27,8 +27,8 @@
     "next-transpile-modules": "9.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "@matthill8286/atomic-ui": "^1.3.27",
-    "@matthill8286/atomic-icon-library": "^1.0.3",
+    "@matthill8286/atomic-ui": "https://github.com/matthill8286/atomic-ui.git",
+    "@matthill8286/atomic-icon-library": "https://github.com/matthill8286/atomic-icon-library.git",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
