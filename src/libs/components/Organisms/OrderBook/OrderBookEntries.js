@@ -8,12 +8,11 @@ export var OrderBookEntry = memo(function (_ref) {
       total = _ref.total,
       colorSpriteWidth = _ref.colorSpriteWidth,
       color = _ref.color,
-      isReversed = _ref.isReversed,
-      textColor = _ref.textColor;
+      isReversed = _ref.isReversed
   return React.createElement(React.Fragment, null, React.createElement(StyledGhostRow, null, React.createElement(StyledGhostSprite, {
     isReversed: isReversed
   }, React.createElement(StyledColoredData, {
-    color: textColor,
+    color: color,
     showPercentage: colorSpriteWidth
   }))), React.createElement(TableRow, {
     key: price,
