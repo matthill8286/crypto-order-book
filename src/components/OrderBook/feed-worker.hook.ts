@@ -16,7 +16,7 @@ export const useFeedWorker = (): UseFeedWorker => {
   const worker = useRef<Worker>()
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       worker.current = new Worker(
         new URL('@/workers/feed.worker', import.meta.url)
       )
