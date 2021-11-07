@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/api/*": ["src/api/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/workers/*": ["src/workers/*"],
+      "@/types/*": ["src/types/*"],
+      "saiyan-component-library": ["node_modules/@matthill8286/atomic-ui/dist/index.js"]
+    }
+  },
+  "exclude": ["node_modules", ".next", "out", "node_modules/@matthill8286/atomic-ui"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+}
