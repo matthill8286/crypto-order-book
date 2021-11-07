@@ -27,3 +27,5 @@ declare module '*.ttf' {
   const content: string
   export default content
 }
+
+declare module '@matthill8286/atomic-ui'
