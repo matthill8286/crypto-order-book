@@ -12,8 +12,35 @@ import {
   styled,
   useWindowDimensions,
   Heading,
-  Section
+  Section,
+  Button
 } from '../../libs'
+
+const KillButton = styled(Button)`
+    background-color: red;
+    color: white;
+    border: 0;
+    margin: 0 ${({ theme }) => theme.spacing.base.md};
+    
+    &:hover {
+        background-color: red;
+        color: grey;
+          border: 0;
+    }
+`
+
+const ToggleButton = styled(Button)`
+    background-color: purple;
+    color: white;
+    border: 0;
+    margin: 0 ${({ theme }) => theme.spacing.base.md};
+    
+    &:hover {
+        color: grey;
+        background-color: purple;
+          border: 0;
+    }
+`
 
 const StyledTableWrapper = styled(FlexBox)`
   flex: 1;
@@ -165,12 +192,12 @@ const OrderBook = (): ReactElement | null => {
         </FlexItem>
       </StyledTableWrapper>
       <div className={styles.bottomBar}>
-        <button className={styles.buttonPurple} onClick={toggleFeed}>
+        <ToggleButton onClick={toggleFeed}>
           Toggle Feed
-        </button>
-        <button className={styles.buttonRed} onClick={killFeed}>
+        </ToggleButton>
+        <KillButton  onClick={killFeed}>
           Kill Feed
-        </button>
+        </KillButton>
       </div>
     </Section>
   )
@@ -207,22 +234,6 @@ const styles = {
     align-items: center;
     height: 10vh;
     max-height: 100px;
-  `,
-  buttonRed: css`
-    background-color: red;
-    color: white;
-    margin: 0px 20px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  `,
-  buttonPurple: css`
-    background-color: purple;
-    color: white;
-    margin: 0px 20px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
   `
 }
 
