@@ -177,7 +177,7 @@ class OrderBookSocketFeed {
   ): {
     [key: number]: OrderDeltaWithTimestamp
   } {
-    return deltaArray.reduce(
+    return deltaArray.slice(0, 20).reduce(
       (acc: { [key: number]: OrderDeltaWithTimestamp }, curr) => {
         const [price, size] = curr
         acc[price] = {
@@ -254,11 +254,11 @@ class OrderBookSocketFeed {
     }
 
     const orderBookSnapshot: OrderRowState<OrderRowHash> = this.groupByTickSize({
-      asks: Object.keys(this.sourceOrderBook.asks).slice(0, 15).map((key) => {
+      asks: Object.keys(this.sourceOrderBook.asks).map((key) => {
         const { price, size } = this.sourceOrderBook.asks[parseFloat(key)]
         return [parseFloat(price), size]
       }),
-      bids: Object.keys(this.sourceOrderBook.bids).slice(0, 15).map((key) => {
+      bids: Object.keys(this.sourceOrderBook.bids).map((key) => {
         const { price, size } = this.sourceOrderBook.bids[parseFloat(key)]
         return [parseFloat(price), size]
       }),
