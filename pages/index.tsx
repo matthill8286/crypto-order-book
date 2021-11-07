@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import { saiyanTheme } from 'saiyan-component-library'
+import { saiyanTheme, ThemeProvider } from '@matthill8286/atomic-ui'
 import OrderBook from '@/components/OrderBook'
-import { ThemeProvider } from 'styled-components'
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -13,7 +12,6 @@ export const Home = (): JSX.Element => (
     <ThemeProvider theme={saiyanTheme}>
       <OrderBook />
     </ThemeProvider>
-
   </div>
 )
 

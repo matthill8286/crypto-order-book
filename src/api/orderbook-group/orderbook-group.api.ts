@@ -1,4 +1,9 @@
-import { OrderMeta, OrderRowHash, OrderRowState, OrderRowUntotaled } from '@/types/order.type'
+import {
+  OrderMeta,
+  OrderRowHash,
+  OrderRowState,
+  OrderRowUntotaled,
+} from '@/types/order.type'
 
 // const input = [
 //   [11, 1],
@@ -23,14 +28,14 @@ export const refreshOrderBookState = (
   prevOrderBookState: OrderRowState
 ): OrderRowState => {
   const extractSizeFromOrderHashmap = (hashMap: {
-    [key: number]: OrderMeta;
+    [key: number]: OrderMeta
   }) => {
     return Object.keys(hashMap)
       .filter((key) => hashMap[parseFloat(key)])
       .map((key) => {
-        return hashMap[parseFloat(key)].size;
-      });
-  };
+        return hashMap[parseFloat(key)].size
+      })
+  }
 
   return {
     ticker: prevOrderBookState.ticker,
@@ -40,14 +45,14 @@ export const refreshOrderBookState = (
       .concat(extractSizeFromOrderHashmap(prevOrderBookState.bids))
       .filter((size) => size)
       .reduce((acc, curr) => acc + curr, 0),
-  };
-};
+  }
+}
 
-export const getDecimalPlace = (tickSize: number) => {
+export const getDecimalPlace = (tickSize: number): number => {
   return Math.floor(tickSize) === tickSize
     ? 0
-    : tickSize.toString().split(".")[1]?.length || 0;
-};
+    : tickSize.toString().split('.')[1]?.length || 0
+}
 
 export const groupTickRows = (
   tickSize: number,
@@ -73,7 +78,7 @@ export const groupTickRows = (
   // 21 x 0.5 = 10.5
   // 213 x 0.05 = 10.65
 
-  const decimalPlace = getDecimalPlace(tickSize);
+  const decimalPlace = getDecimalPlace(tickSize)
 
   const roundDownToTickDecimals = (
     input: number,
@@ -81,13 +86,13 @@ export const groupTickRows = (
     decimalPlace: number
   ) => {
     if (decimalPlace === 0) {
-      return Math.floor(input);
+      return Math.floor(input)
     }
 
     // round down input to the decimal of the tickSize
     const roundedToDecimalOfTickSize =
       Math.floor(input * Math.pow(10, decimalPlace)) /
-      Math.pow(10, decimalPlace);
+      Math.pow(10, decimalPlace)
 
     // Divide the rounded by the floor(tickSize)
     return parseFloat(
@@ -96,20 +101,20 @@ export const groupTickRows = (
           parseFloat((roundedToDecimalOfTickSize / tickSize).toFixed(10))
         ) * tickSize
       ).toFixed(decimalPlace)
-    );
-  };
+    )
+  }
 
-  let total = 0;
+  let total = 0
 
   return Object.keys(orderDeltas)
     .map((key: string) => orderDeltas[parseFloat(key)])
     .sort((a, b) => {
-      return parseFloat(a.price) - parseFloat(b.price);
+      return parseFloat(a.price) - parseFloat(b.price)
     })
     .filter((k) => k)
     .map((delta) => {
-      const { price, size } = delta;
-      total += size;
+      const { price, size } = delta
+      total += size
       return {
         price: roundDownToTickDecimals(
           parseFloat(price),
@@ -118,12 +123,12 @@ export const groupTickRows = (
         ).toFixed(decimalPlace),
         size,
         total,
-      };
+      }
     })
     .reduce((acc, curr) => {
       return {
         ...acc,
         [curr.price]: curr,
-      };
-    }, {});
-};
+      }
+    }, {})
+}

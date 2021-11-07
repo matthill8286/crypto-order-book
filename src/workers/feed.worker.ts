@@ -5,9 +5,13 @@ import {
   OrderDeltaWithTimestamp,
   OrderRowState,
   SourceOrderBook,
-  TickerShape
+  TickerShape,
 } from '@/types/order.type'
-import { getDecimalPlace, groupTickRows, refreshOrderBookState } from '@/api/orderbook-group/orderbook-group.api'
+import {
+  getDecimalPlace,
+  groupTickRows,
+  refreshOrderBookState,
+} from '@/api/orderbook-group/orderbook-group.api'
 
 class OrderBookSocketFeed {
   private websocket: WebSocket
@@ -32,7 +36,7 @@ class OrderBookSocketFeed {
       const subscription = {
         event: 'subscribe',
         feed: 'book_ui_1',
-        product_ids: [ticker.ticker]
+        product_ids: [ticker.ticker],
       }
 
       this.websocket.send(JSON.stringify(subscription))
@@ -50,7 +54,7 @@ class OrderBookSocketFeed {
           this.sourceOrderBook = {
             ...data,
             asks: this.mapDeltaArrayToHash(data.asks, dateStamp, decimalPlace),
-            bids: this.mapDeltaArrayToHash(data.bids, dateStamp, decimalPlace)
+            bids: this.mapDeltaArrayToHash(data.bids, dateStamp, decimalPlace),
           }
 
           const orderBookSnapshot = this.groupByTickSize({
@@ -59,14 +63,14 @@ class OrderBookSocketFeed {
             ticker: this.ticker,
             tickSize: this.tickSize,
             dateStamp,
-            decimalPlace
+            decimalPlace,
           })
 
           this.orderBookState = orderBookSnapshot
 
           postMessage({
             type: 'SNAPSHOT',
-            data: orderBookSnapshot
+            data: orderBookSnapshot,
           })
 
           break
@@ -94,7 +98,7 @@ class OrderBookSocketFeed {
     const unsubscribe = {
       event: 'unsubscribe',
       feed: 'book_ui_1',
-      product_ids: [this.ticker]
+      product_ids: [this.ticker],
     }
 
     this.websocket.send(JSON.stringify(unsubscribe))
@@ -104,7 +108,7 @@ class OrderBookSocketFeed {
     const subscription = {
       event: 'subscribe',
       feed: 'book_ui_1',
-      product_ids: [ticker.ticker]
+      product_ids: [ticker.ticker],
     }
 
     this.websocket.send(JSON.stringify(subscription))
@@ -115,11 +119,10 @@ class OrderBookSocketFeed {
   }
 
   openFeed(ticker: TickerShape) {
-
     const subscription = {
       event: 'subscribe',
       feed: 'book_ui_1',
-      product_ids: [ticker.ticker]
+      product_ids: [ticker.ticker],
     }
 
     this.websocket.send(JSON.stringify(subscription))
@@ -141,28 +144,28 @@ class OrderBookSocketFeed {
 
     postMessage({
       type: 'SNAPSHOT',
-      data: nextOrderBookState
+      data: nextOrderBookState,
     })
   }
 
   closeFeed() {
     try {
-        const unsubscribe = {
-          event: 'unsubscribe',
-          feed: 'book_ui_1',
-          product_ids: [this.ticker]
-        }
+      const unsubscribe = {
+        event: 'unsubscribe',
+        feed: 'book_ui_1',
+        product_ids: [this.ticker],
+      }
 
-        this.websocket.send(JSON.stringify(unsubscribe))
+      this.websocket.send(JSON.stringify(unsubscribe))
 
-        this.websocket.close()
+      this.websocket.close()
 
-        postMessage({
-          type: 'FEED_KILLED',
-          data: this.ticker
-        })
-
+      postMessage({
+        type: 'FEED_KILLED',
+        data: this.ticker,
+      })
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log('Caught error')
       throw e
     }
@@ -173,7 +176,7 @@ class OrderBookSocketFeed {
     dateStamp: Date,
     decimalPlace: number
   ): {
-    [key: number]: OrderDeltaWithTimestamp;
+    [key: number]: OrderDeltaWithTimestamp
   } {
     return deltaArray.reduce(
       (acc: { [key: number]: OrderDeltaWithTimestamp }, curr) => {
@@ -181,7 +184,7 @@ class OrderBookSocketFeed {
         acc[price] = {
           price: price.toFixed(decimalPlace),
           size,
-          date: dateStamp
+          date: dateStamp,
         }
         return acc
       },
@@ -205,7 +208,7 @@ class OrderBookSocketFeed {
           this.sourceOrderBook.asks[price] = {
             price: price.toFixed(decimalPlace),
             size,
-            date: currentDateStamp
+            date: currentDateStamp,
           }
         }
 
@@ -216,7 +219,7 @@ class OrderBookSocketFeed {
             this.sourceOrderBook.asks[price] = {
               price: price.toFixed(decimalPlace),
               size,
-              date: currentDateStamp
+              date: currentDateStamp,
             }
           }
         }
@@ -233,7 +236,7 @@ class OrderBookSocketFeed {
           this.sourceOrderBook.bids[price] = {
             price: price.toFixed(decimalPlace),
             size,
-            date: currentDateStamp
+            date: currentDateStamp,
           }
         }
 
@@ -244,7 +247,7 @@ class OrderBookSocketFeed {
             this.sourceOrderBook.bids[price] = {
               price: price.toFixed(decimalPlace),
               size,
-              date: currentDateStamp
+              date: currentDateStamp,
             }
           }
         }
@@ -263,7 +266,7 @@ class OrderBookSocketFeed {
       ticker: this.ticker,
       tickSize: this.tickSize,
       dateStamp: currentDateStamp,
-      decimalPlace: getDecimalPlace(this.tickSize)
+      decimalPlace: getDecimalPlace(this.tickSize),
     })
 
     const lastAnnouncedTimeMs: number = this.lastAnnouncedTime.getTime()
@@ -278,7 +281,7 @@ class OrderBookSocketFeed {
 
       postMessage({
         type: 'ORDER',
-        data: orderBookSnapshot
+        data: orderBookSnapshot,
       })
     }
   }
@@ -289,14 +292,14 @@ class OrderBookSocketFeed {
       numLevels: 0,
       feed: '',
       asks: {},
-      bids: {}
+      bids: {},
     }
 
     const emptyOrderBookState: OrderBookSocketFeed['orderBookState'] = {
       ticker: '',
       asks: [],
       bids: [],
-      maxPriceSize: 0
+      maxPriceSize: 0,
     }
 
     this.sourceOrderBook = emptySourceOrderBook
@@ -304,19 +307,19 @@ class OrderBookSocketFeed {
   }
 
   private groupByTickSize({
-                            bids,
-                            asks,
-                            ticker,
-                            tickSize,
-                            dateStamp,
-                            decimalPlace
-                          }: {
-    bids: OrderDelta[];
-    asks: OrderDelta[];
-    ticker: string;
-    tickSize: number;
-    dateStamp: Date;
-    decimalPlace: number;
+    bids,
+    asks,
+    ticker,
+    tickSize,
+    dateStamp,
+    decimalPlace,
+  }: {
+    bids: OrderDelta[]
+    asks: OrderDelta[]
+    ticker: string
+    tickSize: number
+    dateStamp: Date
+    decimalPlace: number
   }) {
     const newMaxPriceSize = asks
       .concat(bids)
@@ -334,7 +337,7 @@ class OrderBookSocketFeed {
         tickSize,
         this.mapDeltaArrayToHash(bids, dateStamp, decimalPlace)
       ),
-      maxPriceSize: newMaxPriceSize
+      maxPriceSize: newMaxPriceSize,
     }
     return orderBookSnapshot
   }
@@ -358,7 +361,7 @@ onmessage = (event: MessageEvent<any>) => {
     }
     case 'REOPEN_FEED': {
       feed.openFeed(event.data.ticker)
-      break;
+      break
     }
     default: {
       // eslint-disable-next-line no-console

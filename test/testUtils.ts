@@ -4,7 +4,7 @@ const Providers = ({ children }) => {
   return children
 }
 
-const customRender = (ui, options = {}) =>
+const customRender = (ui: any, options = {}) =>
   render(ui, { wrapper: Providers, ...options })
 
 // re-export everything
