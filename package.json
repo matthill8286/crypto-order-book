@@ -28,6 +28,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "@matthill8286/atomic-ui": "https://github.com/matthill8286/atomic-ui.git",
+    "@matthill8286/atomic-icon-library": "https://github.com/matthill8286/atomic-icon-library.git",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
