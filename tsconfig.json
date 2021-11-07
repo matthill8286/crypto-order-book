@@ -23,6 +23,11 @@
       "atomic-ui": ["node_modules/@matthill8286/atomic-ui/dist/index.js"]
     }
   },
-  "exclude": ["node_modules", ".next", "out", "node_modules/@matthill8286/atomic-ui"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "node_modules/@matthill8286/atomic-ui"
+  ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
 }

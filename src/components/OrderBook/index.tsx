@@ -11,7 +11,7 @@ import {
   OrderBookTable,
   styled,
   useWindowDimensions,
-  Heading
+  Heading,
 } from '@matthill8286/atomic-ui'
 
 const StyledTableWrapper = styled(FlexBox)`
@@ -26,13 +26,13 @@ const feedTickerOptions = {
   PI_XBTUSD: {
     tickSize: 0.5,
     tickSizes: [0.5, 1, 2.5],
-    ticker: 'PI_XBTUSD'
+    ticker: 'PI_XBTUSD',
   },
   PI_ETHUSD: {
     tickSize: 0.05,
     tickSizes: [0.05, 0.1, 0.25],
-    ticker: 'PI_ETHUSD'
-  }
+    ticker: 'PI_ETHUSD',
+  },
 }
 
 const OrderBook = (): ReactElement | null => {
@@ -46,9 +46,7 @@ const OrderBook = (): ReactElement | null => {
     feedTickerOptions.PI_ETHUSD.tickSizes
   )
 
-  const [tickSize, setTickSize] = useState(
-    feedTickerOptions.PI_ETHUSD.tickSize
-  )
+  const [tickSize, setTickSize] = useState(feedTickerOptions.PI_ETHUSD.tickSize)
 
   const spread = useMemo(() => {
     const lastAskPrice = Number(min(keys(orderBook?.asks)))
@@ -62,7 +60,11 @@ const OrderBook = (): ReactElement | null => {
   }
 
   if (status === 'loading') {
-    return <CopyText color="white" textAlign="center">Feed Connection Loading...</CopyText>
+    return (
+      <CopyText color="white" textAlign="center">
+        Feed Connection Loading...
+      </CopyText>
+    )
   }
 
   const toggleFeed = () => {
@@ -86,31 +88,32 @@ const OrderBook = (): ReactElement | null => {
 
     feed?.postMessage({
       type: 'KILL_FEED',
-      data: nextToggleState
+      data: nextToggleState,
     })
   }
 
   const changeTickSize = (nativeEvent: React.BaseSyntheticEvent) => {
-
     const nextTickSize = nativeEvent.target.value
 
     setTickSize(nextTickSize)
 
     feed?.postMessage({
       type: 'CHANGE_TICK_SIZE',
-      tickSize: nextTickSize
+      tickSize: nextTickSize,
     })
   }
 
   return (
     <section style={{ minHeight: '800px' }}>
-      <StyledTableWrapper flexDirection='row'>
+      <StyledTableWrapper flexDirection="row">
         <div className={styles.topbar}>
-          <Heading scale="level-4" weight="bold" color="white">{product}</Heading>
+          <Heading scale="level-4" weight="bold" color="white">
+            {product}
+          </Heading>
           {!isMobile && <CopyText color="white">Spread {spread}</CopyText>}
           <select
-            name='tickSize'
-            id='tickSize'
+            name="tickSize"
+            id="tickSize"
             value={tickSize}
             className={styles.selectDropdown}
             onChange={(e) => {
@@ -129,27 +132,31 @@ const OrderBook = (): ReactElement | null => {
           </select>
         </div>
       </StyledTableWrapper>
-      <StyledTableWrapper flexDirection='column'>
-        <FlexItem flex='1'>
+      <StyledTableWrapper flexDirection="column">
+        <FlexItem flex="1">
           <OrderBookTable
             rows={orderBook.asks}
-            rowsKey='ask'
+            rowsKey="ask"
             maxPriceSize={orderBook.maxPriceSize}
-            textColor='error'
-            headerTextColor='white'
+            textColor="error"
+            headerTextColor="white"
             isReversed
-            backgroundColor='secondary'
+            backgroundColor="secondary"
             isOutlineRequired={false}
           />
         </FlexItem>
-        {isMobile && (<CopyText display="flex" alignText='center' color='grey3'>{spread}</CopyText>)}
-        <FlexItem flex='1'>
+        {isMobile && (
+          <CopyText display="flex" alignText="center" color="grey3">
+            {spread}
+          </CopyText>
+        )}
+        <FlexItem flex="1">
           <OrderBookTable
             rows={orderBook.bids}
-            rowsKey='bid'
-            backgroundColor='secondary'
-            headerTextColor='white'
-            textColor='info'
+            rowsKey="bid"
+            backgroundColor="secondary"
+            headerTextColor="white"
+            textColor="info"
             hideOnMobile={isMobile}
             maxPriceSize={orderBook.maxPriceSize}
             isOutlineRequired={false}
@@ -182,7 +189,7 @@ const styles = {
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    padding: 0px 20px;  
+    padding: 0px 20px;
     align-items: center;
     background-color: #0b1f38;
   `,
@@ -215,7 +222,7 @@ const styles = {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-  `
+  `,
 }
 
 export default OrderBook

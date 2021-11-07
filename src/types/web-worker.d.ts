@@ -1,7 +1,7 @@
-declare module "worker-loader?name=static/[hash].worker.js!*" {
+declare module 'worker-loader?name=static/[hash].worker.js!*' {
   class WebpackWorker extends Worker {
-    constructor();
+    constructor()
   }
 
-  export default WebpackWorker;
+  export default WebpackWorker
 }
