@@ -15,6 +15,7 @@ import {
   Section,
   Button
 } from '../../libs'
+import { TickerInternalState, TickerState } from '../../types/order.type'
 
 const KillButton = styled(Button)`
     background-color: red;
@@ -50,19 +51,8 @@ const StyledTableWrapper = styled(FlexBox)`
   }
 `
 
-type Ticker = {
-  [tickerName: string]: {
-    tickSize: number;
-    ticker: string;
-    tickSizes: number[]
-  }
-}
 
-type tickerSwitch<T> = {
-  [Property in keyof T]: boolean;
-}
-
-const feedTickerOptions: Ticker = {
+const feedTickerOptions: TickerState = {
   PI_XBTUSD: {
     tickSize: 0.5,
     tickSizes: [0.5, 1, 2.5],
@@ -80,7 +70,7 @@ const OrderBook = (): ReactElement | null => {
   const { breakpoint: currentBreakpoint } = useWindowDimensions()
   const isMobile = currentBreakpoint < breakpoints.md
 
-  const [product, setProduct] = useState(feedTickerOptions.PI_ETHUSD)
+  const [product, setProduct]: [TickerInternalState, React.Dispatch<React.SetStateAction<TickerInternalState>>] = useState(feedTickerOptions.PI_ETHUSD)
 
   const spread = useMemo(() => {
     const lastAskPrice = Number(min(keys(orderBook?.asks)))
@@ -202,7 +192,7 @@ const OrderBook = (): ReactElement | null => {
         <ToggleButton onClick={toggleFeed}>
           Toggle Feed
         </ToggleButton>
-        <KillButton  onClick={killFeed}>
+        <KillButton onClick={killFeed}>
           Kill Feed
         </KillButton>
       </div>

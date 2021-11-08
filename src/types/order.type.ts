@@ -3,16 +3,26 @@ export interface TickerShape {
   tickSize: number
 }
 
-export type OrderMeta = {
-  price: PriceDisplay
-  size: number
-  total?: number
+export interface TickerInternalState extends TickerShape {
+  tickerSizes?: number[]
 }
 
-export type OrderRowWithoutTotal = {
+export type TickerState = {
+  [tickerName: string]: {
+    tickSize: number;
+    ticker: string;
+    tickSizes: number[]
+  }
+}
+
+
+export type OrderMeta = {
   price: PriceDisplay
-  size: number
-  total?: number
+  size: Size
+  total?: Price
+}
+
+export interface OrderRowWithoutTotal extends OrderMeta{
   date?: Date
 }
 
