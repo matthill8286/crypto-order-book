@@ -13,7 +13,8 @@ import {
   useWindowDimensions,
   Heading,
   Section,
-  Button
+  Button,
+  Modal
 } from '../../libs'
 import { TickerInternalState, TickerState } from '../../types/order.type'
 
@@ -70,6 +71,8 @@ const OrderBook = (): ReactElement | null => {
   const isMobile = currentBreakpoint < breakpoints.md
 
   const [product, setProduct]: [TickerInternalState, React.Dispatch<React.SetStateAction<TickerInternalState>>] = useState(feedTickerOptions.PI_ETHUSD)
+  const [stopped, setStopped]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false)
+  const [modal, setModal]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false)
 
   const spread = useMemo(() => {
     const lastAskPrice = Number(min(keys(orderBook?.asks)))
@@ -90,11 +93,12 @@ const OrderBook = (): ReactElement | null => {
     )
   }
 
+  const nextToggleState =
+    orderBook?.ticker === feedTickerOptions.PI_ETHUSD.ticker
+      ? feedTickerOptions.PI_XBTUSD
+      : feedTickerOptions.PI_ETHUSD
+
   const toggleFeed = () => {
-    const nextToggleState: TickerInternalState =
-      orderBook?.ticker === feedTickerOptions.PI_ETHUSD.ticker
-        ? feedTickerOptions.PI_XBTUSD
-        : feedTickerOptions.PI_ETHUSD
 
     setProduct(nextToggleState)
 
@@ -102,15 +106,31 @@ const OrderBook = (): ReactElement | null => {
   }
 
   const killFeed = () => {
-    const nextToggleState =
-      orderBook?.ticker === feedTickerOptions.PI_ETHUSD.ticker
-        ? feedTickerOptions.PI_XBTUSD
-        : feedTickerOptions.PI_ETHUSD
 
     feed?.postMessage({
       type: 'KILL_FEED',
       data: nextToggleState
     })
+
+    setStopped(true)
+
+  }
+
+  const openFeed = () => {
+    setModal(true)
+    setStopped(false)
+  }
+
+  const activateNewFeed = () => {
+
+    setModal(false)
+
+    feed?.postMessage({
+      type: 'REOPEN_FEED',
+      ticker: nextToggleState
+    })
+
+    setProduct(nextToggleState)
   }
 
   const changeTickSize = (nativeEvent: React.BaseSyntheticEvent) => {
@@ -128,73 +148,81 @@ const OrderBook = (): ReactElement | null => {
   }
 
   return (
-    <Section style={{ maxHeight: '800px', overflow: 'scroll' }} color='secondary'>
-      <StyledTableWrapper flexDirection='row'>
-        <div className={styles.topBar}>
-          <Heading scale='level-4' weight='bold' color='white'>
-            {product.ticker}
-          </Heading>
-          {!isMobile && spread && <CopyText color='white'>Spread {spread}</CopyText>}
-          <select
-            name='tickSize'
-            id='tickSize'
-            value={product.tickSize}
-            className={styles.selectDropdown}
-            onChange={(e) => {
-              changeTickSize(
-                e.nativeEvent as unknown as React.BaseSyntheticEvent
-              )
-            }}
-          >
-            {product.tickSizes.map((tickSize: number) => {
-              return (
-                <option key={tickSize} value={tickSize}>
-                  Group {tickSize}
-                </option>
-              )
-            })}
-          </select>
+    <Section>
+      <Section color='secondary'>
+        <StyledTableWrapper flexDirection='row'>
+          <div className={styles.topBar}>
+            <Heading scale='level-4' weight='bold' color='white'>
+              {product.ticker}
+            </Heading>
+            {!isMobile && spread && <CopyText color='white'>Spread {spread}</CopyText>}
+            <select
+              name='tickSize'
+              id='tickSize'
+              value={product.tickSize}
+              className={styles.selectDropdown}
+              onChange={(e) => {
+                changeTickSize(
+                  e.nativeEvent as unknown as React.BaseSyntheticEvent
+                )
+              }}
+            >
+              {product.tickSizes.map((tickSize: number) => {
+                return (
+                  <option key={tickSize} value={tickSize}>
+                    Group {tickSize}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
+        </StyledTableWrapper>
+        <StyledTableWrapper flexDirection='column'>
+          <FlexItem flex='1'>
+            <OrderBookTable
+              rows={orderBook.asks}
+              rowsKey='ask'
+              maxPriceSize={orderBook.maxPriceSize}
+              color='error'
+              headerTextColor='white'
+              isReversed
+              backgroundColor='secondary'
+              isOutlineRequired={false}
+            />
+          </FlexItem>
+          {isMobile && spread && (
+            <CopyText padding='sm 0' margin='0 auto' textAlign='center' color='grey3'>
+              Spread {spread}
+            </CopyText>
+          )}
+          <FlexItem flex='1'>
+            <OrderBookTable
+              rows={orderBook.bids}
+              rowsKey='bid'
+              backgroundColor='secondary'
+              headerTextColor='white'
+              color='info'
+              hideOnMobile={isMobile}
+              maxPriceSize={orderBook.maxPriceSize}
+              isOutlineRequired={false}
+            />
+          </FlexItem>
+        </StyledTableWrapper>
+        <div className={styles.bottomBar}>
+          <ToggleButton onClick={toggleFeed}>
+            Toggle Feed
+          </ToggleButton>
+          <KillButton onClick={!stopped ? killFeed : openFeed}>
+            {!stopped? 'Kill Feed' : 'Open Feed'}
+          </KillButton>
         </div>
-      </StyledTableWrapper>
-      <StyledTableWrapper flexDirection='column'>
-        <FlexItem flex='1'>
-          <OrderBookTable
-            rows={orderBook.asks}
-            rowsKey='ask'
-            maxPriceSize={orderBook.maxPriceSize}
-            color='error'
-            headerTextColor='white'
-            isReversed
-            backgroundColor='secondary'
-            isOutlineRequired={false}
-          />
-        </FlexItem>
-        {isMobile && spread && (
-          <CopyText padding='sm 0' margin='0 auto' textAlign='center' color='grey3'>
-            Spread {spread}
-          </CopyText>
-        )}
-        <FlexItem flex='1'>
-          <OrderBookTable
-            rows={orderBook.bids}
-            rowsKey='bid'
-            backgroundColor='secondary'
-            headerTextColor='white'
-            color='info'
-            hideOnMobile={isMobile}
-            maxPriceSize={orderBook.maxPriceSize}
-            isOutlineRequired={false}
-          />
-        </FlexItem>
-      </StyledTableWrapper>
-      <div className={styles.bottomBar}>
-        <ToggleButton onClick={toggleFeed}>
-          Toggle Feed
-        </ToggleButton>
-        <KillButton onClick={killFeed}>
-          Kill Feed
-        </KillButton>
-      </div>
+      </Section>
+      {modal ? (
+        <Modal showButtonSeparator buttonAlignment="center" paddingSize="md" position="bottom" title="Do you want to open the feed again??" primaryButtonProps={{ buttonLabel: 'Open Feed', onClick: activateNewFeed, actionType: 'prominent' }} onClose={() => {
+          setModal(false)
+          setStopped(true)
+        }} />
+      ) : null}
     </Section>
   )
 }

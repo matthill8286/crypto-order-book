@@ -93,7 +93,7 @@ class OrderBookSocketFeed {
     this.websocket = wss
   }
 
-  toggleFeed(ticker: TickerShape) {
+  toggleFeed(ticker: TickerShape): void {
     const unsubscribe = {
       event: 'unsubscribe',
       feed: 'book_ui_1',
@@ -117,21 +117,25 @@ class OrderBookSocketFeed {
     this.tickSize = ticker.tickSize
   }
 
-  openFeed(ticker: TickerShape) {
+  openFeed(ticker: TickerShape): void {
+
     const subscription = {
       event: 'subscribe',
       feed: 'book_ui_1',
       product_ids: [ticker.ticker],
     }
 
+    this.clearState()
+
     this.websocket.send(JSON.stringify(subscription))
 
     this.ticker = ticker.ticker
 
     this.tickSize = ticker.tickSize
+
   }
 
-  changeTickSize(tickSize: number) {
+  changeTickSize(tickSize: number): void {
     const nextOrderBookState = refreshOrderBookState(
       tickSize,
       this.orderBookState
@@ -147,7 +151,7 @@ class OrderBookSocketFeed {
     })
   }
 
-  closeFeed() {
+  closeFeed(): void {
     try {
       const unsubscribe = {
         event: 'unsubscribe',
@@ -157,15 +161,14 @@ class OrderBookSocketFeed {
 
       this.websocket.send(JSON.stringify(unsubscribe))
 
-      this.websocket.close()
-
       postMessage({
         type: 'FEED_KILLED',
         data: this.ticker,
       })
+
     } catch (e) {
       // eslint-disable-next-line no-console
-      console.log('Caught error')
+      console.log('Caught error', e)
       throw e
     }
   }

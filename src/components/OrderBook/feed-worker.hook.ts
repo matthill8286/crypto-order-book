@@ -25,8 +25,13 @@ export const useFeedWorker = (): UseFeedWorker => {
             setOrderBook(Object.freeze(orderBookSnapshot))
             break
           }
+          case 'REOPEN_FEED': {
+            const orderBookSnapshot: OrderRowState<OrderRowHash> = event.data.data
+            setOrderBook(Object.freeze(orderBookSnapshot))
+            break
+          }
           case 'FEED_KILLED':
-            worker.current?.terminate()
+            // worker.current?.terminate()
             break
         }
       }
