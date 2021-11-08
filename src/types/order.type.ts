@@ -4,7 +4,7 @@ export interface TickerShape {
 }
 
 export interface TickerInternalState extends TickerShape {
-  tickerSizes?: number[]
+  tickSizes?: number[]
 }
 
 export type TickerState = {
