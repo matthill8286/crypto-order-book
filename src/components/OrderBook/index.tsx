@@ -51,7 +51,6 @@ const StyledTableWrapper = styled(FlexBox)`
   }
 `
 
-
 const feedTickerOptions: TickerState = {
   PI_XBTUSD: {
     tickSize: 0.5,
@@ -92,7 +91,7 @@ const OrderBook = (): ReactElement | null => {
   }
 
   const toggleFeed = () => {
-    const nextToggleState =
+    const nextToggleState: TickerInternalState =
       orderBook?.ticker === feedTickerOptions.PI_ETHUSD.ticker
         ? feedTickerOptions.PI_XBTUSD
         : feedTickerOptions.PI_ETHUSD
