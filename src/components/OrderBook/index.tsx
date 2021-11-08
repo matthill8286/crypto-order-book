@@ -50,7 +50,19 @@ const StyledTableWrapper = styled(FlexBox)`
   }
 `
 
-const feedTickerOptions = {
+type Ticker = {
+  [tickerName: string]: {
+    tickSize: number;
+    ticker: string;
+    tickSizes: number[]
+  }
+}
+
+type tickerSwitch<T> = {
+  [Property in keyof T]: boolean;
+}
+
+const feedTickerOptions: Ticker = {
   PI_XBTUSD: {
     tickSize: 0.5,
     tickSizes: [0.5, 1, 2.5],
@@ -68,13 +80,7 @@ const OrderBook = (): ReactElement | null => {
   const { breakpoint: currentBreakpoint } = useWindowDimensions()
   const isMobile = currentBreakpoint < breakpoints.md
 
-  const [product, setProduct] = useState(feedTickerOptions.PI_ETHUSD.ticker)
-
-  const [groupOptions, setGroupOptions] = useState(
-    feedTickerOptions.PI_ETHUSD.tickSizes
-  )
-
-  const [tickSize, setTickSize] = useState(feedTickerOptions.PI_ETHUSD.tickSize)
+  const [product, setProduct] = useState(feedTickerOptions.PI_ETHUSD)
 
   const spread = useMemo(() => {
     const lastAskPrice = Number(min(keys(orderBook?.asks)))
@@ -101,9 +107,7 @@ const OrderBook = (): ReactElement | null => {
         ? feedTickerOptions.PI_XBTUSD
         : feedTickerOptions.PI_ETHUSD
 
-    setTickSize(nextToggleState.tickSize)
-    setGroupOptions(nextToggleState.tickSizes)
-    setProduct(nextToggleState.ticker)
+    setProduct(nextToggleState)
 
     feed?.postMessage({ type: 'TOGGLE_FEED', ticker: nextToggleState })
   }
@@ -123,7 +127,10 @@ const OrderBook = (): ReactElement | null => {
   const changeTickSize = (nativeEvent: React.BaseSyntheticEvent) => {
     const nextTickSize = nativeEvent.target.value
 
-    setTickSize(nextTickSize)
+    setProduct({
+      ...product,
+      tickSize: nextTickSize
+    })
 
     feed?.postMessage({
       type: 'CHANGE_TICK_SIZE',
@@ -136,13 +143,13 @@ const OrderBook = (): ReactElement | null => {
       <StyledTableWrapper flexDirection='row'>
         <div className={styles.topBar}>
           <Heading scale='level-4' weight='bold' color='white'>
-            {product}
+            {product.ticker}
           </Heading>
           {!isMobile && spread && <CopyText color='white'>Spread {spread}</CopyText>}
           <select
             name='tickSize'
             id='tickSize'
-            value={tickSize}
+            value={product.tickSize}
             className={styles.selectDropdown}
             onChange={(e) => {
               changeTickSize(
@@ -150,7 +157,7 @@ const OrderBook = (): ReactElement | null => {
               )
             }}
           >
-            {groupOptions.map((tickSize: number) => {
+            {product.tickSizes.map((tickSize: number) => {
               return (
                 <option key={tickSize} value={tickSize}>
                   Group {tickSize}
